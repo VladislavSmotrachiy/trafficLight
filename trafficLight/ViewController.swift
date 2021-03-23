@@ -9,17 +9,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet weak var redLight: UIView!
-    @IBOutlet weak var orangeLight: UIView!
     @IBOutlet weak var greenLight: UIView!
+    @IBOutlet weak var orangeLight: UIView!
     
+    @IBOutlet weak var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        button.layer.cornerRadius = 10
+        viewWillLayoutSubviews()
+        
+    
+       
+        
+        
     }
-
-
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        redLight.layer.cornerRadius = redLight.frame.height / 2.0
+        greenLight.layer.cornerRadius = redLight.frame.height / 2.0
+        orangeLight.layer.cornerRadius = redLight.frame.height / 2.0
+        }
+    
+    @IBAction func switchTrafficLight() {
+        
+    }
+    
 }
 
