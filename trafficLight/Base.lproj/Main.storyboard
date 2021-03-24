@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds9-0X-qKg">
-                                <rect key="frame" x="57" y="738" width="300" height="60"/>
+                                <rect key="frame" x="57" y="739" width="300" height="59"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ukS-yh-WAS"/>
@@ -31,44 +31,44 @@
                                     <action selector="switchTrafficLight" destination="BYZ-38-t0r" eventType="touchUpInside" id="M29-Ss-Ljp"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="87c-ad-548">
-                                <rect key="frame" x="148" y="164" width="118" height="403"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ucX-z5-abh">
+                                <rect key="frame" x="148" y="249" width="118" height="396"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOc-zF-iGw" userLabel="red">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baC-2s-tX0" userLabel="red">
                                         <rect key="frame" x="0.0" y="0.0" width="118" height="119"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8D-zR-bI7" userLabel="orange">
-                                        <rect key="frame" x="0.0" y="142" width="118" height="119"/>
+                                        <rect key="frame" x="0.0" y="138" width="118" height="120"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-ur-Y0F" userLabel="green">
-                                        <rect key="frame" x="0.0" y="284" width="118" height="119"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQ3-fu-hJT" userLabel="green">
+                                        <rect key="frame" x="0.0" y="277" width="118" height="119"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="u8D-zR-bI7" firstAttribute="top" secondItem="87c-ad-548" secondAttribute="top" constant="142" id="Jy3-Qz-KVB"/>
-                                    <constraint firstItem="u8D-zR-bI7" firstAttribute="centerY" secondItem="87c-ad-548" secondAttribute="centerY" id="kxb-oV-4BP"/>
+                                    <constraint firstItem="u8D-zR-bI7" firstAttribute="top" secondItem="ucX-z5-abh" secondAttribute="top" constant="138" id="08W-Yp-iRk"/>
+                                    <constraint firstItem="u8D-zR-bI7" firstAttribute="centerY" secondItem="ucX-z5-abh" secondAttribute="centerY" id="Uut-ae-8Gh"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="87c-ad-548" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="2kP-T7-Vyf"/>
-                            <constraint firstItem="87c-ad-548" firstAttribute="centerX" secondItem="ds9-0X-qKg" secondAttribute="centerX" id="3Wz-ug-5R0"/>
-                            <constraint firstItem="87c-ad-548" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V84-Hs-ErO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ds9-0X-qKg" secondAttribute="bottom" constant="64" id="h23-Bn-9lj"/>
-                            <constraint firstItem="87c-ad-548" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="kkN-gG-EHM"/>
-                            <constraint firstAttribute="bottom" secondItem="87c-ad-548" secondAttribute="bottom" constant="329" id="zI9-qm-cG7"/>
+                            <constraint firstItem="ucX-z5-abh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="205" id="1bx-2W-UER"/>
+                            <constraint firstItem="ds9-0X-qKg" firstAttribute="top" secondItem="ucX-z5-abh" secondAttribute="bottom" constant="94" id="90F-z3-wvq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ds9-0X-qKg" secondAttribute="bottom" constant="64" id="EGk-pa-EW3"/>
+                            <constraint firstItem="ds9-0X-qKg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wqi-dF-cLc"/>
+                            <constraint firstItem="ucX-z5-abh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="cy3-g3-fgS"/>
+                            <constraint firstItem="ds9-0X-qKg" firstAttribute="centerX" secondItem="ucX-z5-abh" secondAttribute="centerX" id="zK1-O9-fGU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="ds9-0X-qKg" id="285-i2-4uH"/>
-                        <outlet property="greenLight" destination="hbc-ur-Y0F" id="NfW-M1-bbd"/>
+                        <outlet property="greenLight" destination="wQ3-fu-hJT" id="sLu-68-lep"/>
                         <outlet property="orangeLight" destination="u8D-zR-bI7" id="M8P-4Q-bDj"/>
-                        <outlet property="redLight" destination="QOc-zF-iGw" id="0yS-n2-dg9"/>
+                        <outlet property="redLignt" destination="baC-2s-tX0" id="9nk-mY-Z9B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,8 +89,8 @@
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
