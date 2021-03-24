@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var orangeLight: UIView!
     @IBOutlet weak var button: UIButton!
     
+    enum AllColors {
+        case firstRedLignt, secondOrangeLight,  thirdGreenLight
+    }
+    
+    var allColors = AllColors.firstRedLignt
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,41 +28,33 @@ class ViewController: UIViewController {
         redLignt.alpha = 0.3
         orangeLight.alpha = 0.3
         greenLight.alpha = 0.3
-
     }
     
-    enum AllLight {
-        case redLignt, orangeLight, greenLight
-    }
-    var allLigth = AllLight.redLignt
-    
-        
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        redLignt.layer.cornerRadius = redLignt.frame.height / 2.0
-        greenLight.layer.cornerRadius = greenLight.frame.height / 2.0
-        orangeLight.layer.cornerRadius = orangeLight.frame.height / 2.0
+        redLignt.layer.cornerRadius = redLignt.frame.height / 2
+        greenLight.layer.cornerRadius = greenLight.frame.height / 2
+        orangeLight.layer.cornerRadius = orangeLight.frame.height / 2
         }
-    
     
     
     @IBAction func switchTrafficLight() {
-        switch allLigth {
-        case .redLignt:
+        switch allColors {
+        case .firstRedLignt:
             greenLight.alpha = 0.3
             redLignt.alpha = 1
-            allLigth = .orangeLight
-            break
-        case .orangeLight:
+            allColors = .secondOrangeLight
+            button.setTitle("NEXT", for: .normal)
+        case .secondOrangeLight:
             redLignt.alpha = 0.3
             orangeLight.alpha = 1
-            allLigth = .greenLight
-        case .greenLight:
+            allColors = .thirdGreenLight
+        case .thirdGreenLight:
             orangeLight.alpha = 0.3
             greenLight.alpha = 1
-            allLigth = .redLignt
+            allColors = .firstRedLignt
         }
-        }
+    }
         
             
 
