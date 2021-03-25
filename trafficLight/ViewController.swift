@@ -18,10 +18,8 @@ class ViewController: UIViewController {
     enum AllColors {
         case firstRedLignt, secondOrangeLight,  thirdGreenLight
     }
-    
     var allColors = AllColors.firstRedLignt
-   
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         button.layer.cornerRadius = 10
@@ -35,16 +33,15 @@ class ViewController: UIViewController {
         redLignt.layer.cornerRadius = redLignt.frame.height / 2
         greenLight.layer.cornerRadius = greenLight.frame.height / 2
         orangeLight.layer.cornerRadius = orangeLight.frame.height / 2
-        }
-    
+    }
     
     @IBAction func switchTrafficLight() {
+        button.setTitle("NEXT", for: .normal)
         switch allColors {
         case .firstRedLignt:
             greenLight.alpha = 0.3
             redLignt.alpha = 1
             allColors = .secondOrangeLight
-            button.setTitle("NEXT", for: .normal)
         case .secondOrangeLight:
             redLignt.alpha = 0.3
             orangeLight.alpha = 1
